@@ -14,7 +14,7 @@
 	<node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)" respawn="false" >
 		<param name="frame_id" value="/map" />
 	</node>
-	<group ns="robot_0">
+	<group ns="$(arg robotName1)">
 		<param name="tf_prefix" value="$(arg robotName1)" />
 		<include
 			file="$(find navigation_under_namespace)/launch/includes/single_robot_wild.launch">
