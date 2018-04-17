@@ -34,4 +34,7 @@
 	<!-- bumper/cliff to pointcloud -->
 	<include
 		file="$(find turtlebot_bringup)/launch/includes/kobuki/bumper2pc.launch.xml" />
+
+	<!-- include auto docking nodelet -->
+	<include file="$(find kobuki_auto_docking)/launch/minimal.launch"/>	
 </launch>
