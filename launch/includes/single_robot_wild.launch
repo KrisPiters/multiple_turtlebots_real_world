@@ -21,7 +21,7 @@
  
  <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
       <remap from="map" to="/map" />
-			<remap from="cmd_vel" to="$(arg namespace)/cmd_vel_mux/input/navi"/>
+			<remap from="cmd_vel" to="cmd_vel_mux/input/navi"/>
       <param name="controller_frequency" value="10.0" />
       <rosparam file="$(find navigation_under_namespace)/params/move_base_config/costmap_common_params.yaml" command="load" ns="global_costmap" />
       <rosparam file="$(find navigation_under_namespace)/params/move_base_config/costmap_common_params.yaml" command="load" ns="local_costmap" />
