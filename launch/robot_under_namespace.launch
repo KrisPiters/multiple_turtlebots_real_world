@@ -1,5 +1,5 @@
 <launch>
-	<arg name="robotName1" default="robot_0" />
+	<arg name="robot_name" default="robot_0" />
 
 	<arg name="base"              default="$(env TURTLEBOT_BASE)"         doc="mobile base type [create, roomba]"/>
 	<arg name="stacks"            default="$(env TURTLEBOT_STACKS)"       doc="stack type displayed in visualisation/simulation [circles, hexagons]"/>
@@ -16,11 +16,11 @@
 		<param name="frame_id" value="/map" />
 	</node>
 	-->
-	<group ns="$(arg robotName1)">
-		<param name="tf_prefix" value="$(arg robotName1)" />
+	<group ns="$(arg robot_name)">
+		<param name="tf_prefix" value="$(arg robot_name)" />
 		<include
 			file="$(find navigation_under_namespace)/launch/includes/single_robot_wild.launch">
-			<arg name="namespace" value="$(arg robotName1)" />
+			<arg name="namespace" value="$(arg robot_name)" />
 			<arg name="initial_pose_x" value="0.0" />
 			<arg name="initial_pose_y" value="0.0" />
 			<arg name="initial_pose_a" value="0.0" />
