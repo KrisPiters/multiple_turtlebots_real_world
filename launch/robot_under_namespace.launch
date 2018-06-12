@@ -24,6 +24,9 @@
 			<arg name="initial_pose_x" value="0.0" />
 			<arg name="initial_pose_y" value="0.0" />
 			<arg name="initial_pose_a" value="0.0" />
+			<arg name="rgb_processing" value="false" />
+			<arg name="depth_registration" value="false" />
+			<arg name="depth_processing" value="false" />
 		</include>
 	</group>
 </launch>
