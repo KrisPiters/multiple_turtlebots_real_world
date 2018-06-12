@@ -8,9 +8,9 @@
 	<arg name="custom_param_file" default="$(find turtlebot_navigation)/param/dummy.yaml"/>
 
 	<!-- 3d sensor parameters -->
-	<arg name="rgb_processing" value="false" />
-	<arg name="depth_registration" value="false" />
-	<arg name="depth_processing" value="false" />
+	<arg name="rgb_processing" default="false" />
+	<arg name="depth_registration" default="false" />
+	<arg name="depth_processing" default="false" />
 	
 	<include file="$(find turtlebot_navigation)/launch/includes/velocity_smoother.launch.xml"/>
 	<include file="$(find turtlebot_navigation)/launch/includes/safety_controller.launch.xml"/>
